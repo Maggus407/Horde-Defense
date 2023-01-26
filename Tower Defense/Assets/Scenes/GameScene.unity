@@ -829,9 +829,6 @@ MonoBehaviour:
   - prefab: {fileID: 7587028909125494115, guid: 7ddc82b0f4a0bf84ab42bf399bffac0d, type: 3}
     cost: 10
     icon: {fileID: 21300000, guid: ce290ce7bf430f143b85db4db3e3706e, type: 3}
-  - prefab: {fileID: 2322128610216685190, guid: fec2957fd19e0454c85ec07ac623299d, type: 3}
-    cost: 50
-    icon: {fileID: 21300000, guid: 4279eb428d36c784dac3da5cfcd6745a, type: 3}
   - prefab: {fileID: 5450749841448928167, guid: 842e4fb7d97adde4ba9249a0c146ca90, type: 3}
     cost: 100
     icon: {fileID: 21300000, guid: 1c9db882ae23daf45837377a0b8c834f, type: 3}

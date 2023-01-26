@@ -14,7 +14,7 @@ public class WaveSpawner : MonoBehaviour
     List<Enemie> enemiesInWave;
     List<Node> paths;
 
-    private void OnEnable()
+    void Start()
     {
         paths = WaveFunction.pathForEnemy;
         enemiesInWave = new List<Enemie>();
@@ -40,31 +40,33 @@ public class WaveSpawner : MonoBehaviour
     {
         //Fill the list random with enemies
         int current = 0;
-        while(current != currentMaxWeight)
+        for (int i = 0; i < 5; i++)
         {
-            Debug.Log("While");
-            //Randomize the enemy
-            //Get a random enemie
-            int randomEnemie = Random.Range(0, enemies.Count);
-            //Check if the enemie is a boss
-            //If the enemie is a boss, add it to the list
-            if (enemies[randomEnemie].boss == true && waveRound%20==0)
             {
-                enemiesInWave.Add(enemies[randomEnemie]);
-                current += enemies[randomEnemie].weight;
-            }
-            //If the enemie is not a boss, check if the weight is too high
-            //If the weight is too high, get another enemie
-            else if (enemies[randomEnemie].boss == false && current + enemies[randomEnemie].weight <= currentMaxWeight)
-            {
-                enemiesInWave.Add(enemies[randomEnemie]);
-                current += enemies[randomEnemie].weight;
-            }
-            //If the weight is not too high, add the enemie to the list
-            else
-            {
-                enemiesInWave.Add(enemies[randomEnemie]);
-                current += enemies[randomEnemie].weight;
+                Debug.Log("While");
+                //Randomize the enemy
+                //Get a random enemie
+                int randomEnemie = Random.Range(0, enemies.Count);
+                //Check if the enemie is a boss
+                //If the enemie is a boss, add it to the list
+                if (enemies[randomEnemie].boss == true && waveRound % 20 == 0)
+                {
+                    enemiesInWave.Add(enemies[randomEnemie]);
+                    current += enemies[randomEnemie].weight;
+                }
+                //If the enemie is not a boss, check if the weight is too high
+                //If the weight is too high, get another enemie
+                else if (enemies[randomEnemie].boss == false && current + enemies[randomEnemie].weight <= currentMaxWeight)
+                {
+                    enemiesInWave.Add(enemies[randomEnemie]);
+                    current += enemies[randomEnemie].weight;
+                }
+                //If the weight is not too high, add the enemie to the list
+                else
+                {
+                    enemiesInWave.Add(enemies[randomEnemie]);
+                    current += enemies[randomEnemie].weight;
+                }
             }
         }
     }
@@ -88,9 +90,6 @@ public class WaveSpawner : MonoBehaviour
 
     public void StartGame()
     {
-        Debug.Log("Drücken");
         gameObject.GetComponent<WaveSpawner>().enabled = true;
-        Time.timeScale = 1;
-        Debug.Log("Gedrückt");
     }
 }
