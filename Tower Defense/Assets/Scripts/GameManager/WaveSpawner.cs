@@ -88,7 +88,9 @@ public class WaveSpawner : MonoBehaviour
 
     public void StartGame()
     {
+        Debug.Log("Drücken");
         gameObject.GetComponent<WaveSpawner>().enabled = true;
         Time.timeScale = 1;
+        Debug.Log("Gedrückt");
     }
 }
