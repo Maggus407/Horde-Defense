@@ -3873,6 +3873,7 @@ MonoBehaviour:
     weight: 2
     boss: 0
   waveRound: 1
+  timeBetweenWaves: 5
 --- !u!114 &1821216575
 MonoBehaviour:
   m_ObjectHideFlags: 0
