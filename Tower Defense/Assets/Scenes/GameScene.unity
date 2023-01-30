@@ -3860,16 +3860,16 @@ MonoBehaviour:
   enemies:
   - enemie: {fileID: 1796905261711554258, guid: d8cd8a0b03e1e834abe204f9061934de, type: 3}
     speed: 2
-    health: 100
+    health: 10
     armor: 0
     money: 10
     weight: 1
     boss: 0
   - enemie: {fileID: 8574783780601740131, guid: 7fdb2f0907079fc4497d437d977cabe5, type: 3}
     speed: 5
-    health: 100
+    health: 5
     armor: 0
-    money: 10
+    money: 12
     weight: 2
     boss: 0
   waveRound: 1

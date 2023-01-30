@@ -17,5 +17,4 @@ public class AOESlow : MonoBehaviour
             other.GetComponent<EnemyPathFinder>().speed = other.GetComponent<EnemyPathFinder>().enemie.speed;
         }
     }
-   
 }

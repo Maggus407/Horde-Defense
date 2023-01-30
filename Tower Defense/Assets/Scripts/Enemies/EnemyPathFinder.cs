@@ -26,8 +26,7 @@ public class EnemyPathFinder : MonoBehaviour
             }
             else
             {
-            Physics.IgnoreLayerCollision(0, i, true);           
-                
+                Physics.IgnoreLayerCollision(0, i, true);                          
             }
         }
 
@@ -42,8 +41,7 @@ public class EnemyPathFinder : MonoBehaviour
         }
    }
 
-     //Wenn der Enemie den letzten Block erreicht hat zerstört er sich
-   void GetNextWaypoint(){
+    void GetNextWaypoint(){
         if(wavepointIndex >= pathfinder.Count - 1){
             EndPath();
             return;
@@ -52,6 +50,7 @@ public class EnemyPathFinder : MonoBehaviour
         target = new Vector3(pathfinder[wavepointIndex].Width, 0.6f, pathfinder[wavepointIndex].Height);
    }
 
+    //If the Enemie reached the End of the Path, destroy it
     void EndPath()
     {
         Destroy(gameObject);
